@@ -1,0 +1,30 @@
+name: quranic_chatbot
+description: Quranic Chatbot - read, listen to, search and ask questions about the Holy Quran.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  hive_flutter: ^1.1.0      # local database (settings, bookmarks, history, offline Quran cache)
+  http: ^1.2.0              # calls the backend
+  just_audio: ^0.9.36       # verse recitation playback
+  record: ^5.1.0            # microphone recording (voice chat, Recite & Recognize)
+  path_provider: ^2.1.0     # folder for saved recitation MP3s
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # OPTIONAL offline Quran. Generate the file first (see assets/README.md),
+  # then remove the '#' below. Without it the app still works: it downloads
+  # each Surah from the backend the first time you open it and keeps a copy.
+  # assets:
+  #   - assets/quran_offline.json

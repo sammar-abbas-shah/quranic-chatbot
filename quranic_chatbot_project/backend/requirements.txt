@@ -1,0 +1,5 @@
+fastapi
+httpx
+groq
+google-genai
+python-multipart
